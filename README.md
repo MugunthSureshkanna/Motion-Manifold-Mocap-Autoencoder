@@ -14,7 +14,7 @@ This project trains a deep convolutional autoencoder on windowed segments of 3D 
 - Kaiming initialization for encoder weights, Xavier for the final decoder layer
 - Optional element-dropout corruption during training to improve manifold robustness
 
-**Input features (dataloader.py) **
+**Input features (dataloader.py**
 - Normalized joint positions (21 joints × 3 dims = 63 features)
 - Root translational velocity (XZ plane, 2 features)
 - Root rotational velocity (Y axis, 1 feature)
