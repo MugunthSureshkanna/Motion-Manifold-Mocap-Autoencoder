@@ -24,6 +24,7 @@ This project trains a deep convolutional autoencoder on windowed segments of 3D 
 - Trained on TACC (Texas Advanced Computing Center)
 
 **Capabilities**
+
 All operations work by manipulating the learned latent space:
 
 **Motion Interpolation** — Encode two motion clips, linearly interpolate latent vectors at parameter t, decode. Root velocity is interpolated separately and used to recover global trajectory.
@@ -37,5 +38,6 @@ All operations work by manipulating the learned latent space:
 **Motion Extension** — Encode a partial clip and decode to a longer sequence, extending motion beyond the observed window.
 
 **Results**
+
 
 Output videos are in output/ae/ covering all five capabilities above, plus PCA visualization of the latent space (output/ae/plots/latent_pca.png) and training curves.
