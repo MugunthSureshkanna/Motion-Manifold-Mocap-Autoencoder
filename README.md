@@ -14,7 +14,7 @@ This project trains a deep convolutional autoencoder on windowed segments of 3D 
 - Kaiming initialization for encoder weights, Xavier for the final decoder layer
 - Optional element-dropout corruption during training to improve manifold robustness
 
-**Input features (dataloader.py**
+**Input features (dataloader.py)**
 - Normalized joint positions (21 joints × 3 dims = 63 features)
 - Root translational velocity (XZ plane, 2 features)
 - Root rotational velocity (Y axis, 1 feature)
@@ -39,10 +39,6 @@ All operations work by manipulating the learned latent space:
 **Corruption Repair** — Apply zero-masking, Gaussian noise, or joint dropout to a motion sequence, then project onto the manifold to recover a plausible clean motion.
 
 **Motion Extension** — Encode a partial clip and decode to a longer sequence, extending motion beyond the observed window.
-
-**Results**
-
-Output videos are in output/ae/ covering all five capabilities above, plus PCA visualization of the latent space (output/ae/plots/latent_pca.png) and training curves.
 
 **IMPORTANT**: 
 If you want to run the code, please download the .pkl file from the following [link](https://drive.google.com/file/d/1OI1ewtBsp51P37D7cNbhNlDF85zEnd2u/view?usp=sharing) and place it in the cmu-mocap/cache folder.
